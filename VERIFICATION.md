@@ -33,4 +33,4 @@ Verified locally on September 24, 2026 against the real DummyJSON service.
 
 Screenshots are stored locally under `artifacts/` (excluded from Git): desktop catalog, mobile catalog, login and product detail. Playwright saves traces/screenshots for any failing tests in `test-results/` (also excluded).
 
-The checks demonstrate the tested flows; they do not guarantee absence of every possible defect. Live API availability is an external dependency. DummyJSON writes are simulated and reconciled locally, as documented in README.md. No public repository or deployment is claimed until publishing is completed.
+The checks demonstrate the tested flows; they do not guarantee absence of every possible defect. Live API availability is an external dependency. DummyJSON writes are simulated and reconciled locally, as documented in README.md. The source is published at [khushichhetri71-tech/folio-product-admin](https://github.com/khushichhetri71-tech/folio-product-admin). A live deployment is still pending.

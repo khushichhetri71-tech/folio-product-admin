@@ -100,7 +100,7 @@ Suggested walkthrough: `server-auth.ts` and the API route → `axios.ts` → `pr
 
 The PDF asks for a public GitHub repository with incremental commits and a Vercel/Netlify live URL. Publishing destinations and account access are separate from implementation. Connect the completed repository to Vercel as a Next.js project, with `npm run build` as the build command. No secret environment variables are required. Do not export this as a static site: the authentication/API server routes are required.
 
-- Public repository: not published yet.
+- Public repository: [khushichhetri71-tech/folio-product-admin](https://github.com/khushichhetri71-tech/folio-product-admin).
 - Live deployment: not published yet.
 - Verification results: see `VERIFICATION.md` after the checks finish.
 
