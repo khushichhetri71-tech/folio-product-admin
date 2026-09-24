@@ -16,6 +16,7 @@ import { Brand } from './brand';
 import { login } from '@/lib/auth-api';
 import { errorMessage } from '@/lib/axios';
 import { safeReturnPath } from '@/lib/validation';
+import { useHydrated } from '@/lib/use-hydrated';
 export function LoginForm() {
   const router = useRouter(),
     params = useSearchParams();
@@ -23,6 +24,7 @@ export function LoginForm() {
     [pending, setPending] = useState(false),
     [error, setError] = useState('');
   const lock = useRef(false);
+  const hydrated = useHydrated();
   async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (lock.current) return;
@@ -135,7 +137,7 @@ export function LoginForm() {
               Your session expired. Sign in to pick up where you left off.
             </div>
           )}
-          <form onSubmit={submit}>
+          <form onSubmit={submit} method="post">
             <label htmlFor="username">Username</label>
             <input
               id="username"
@@ -144,7 +146,7 @@ export function LoginForm() {
               autoComplete="username"
               required
               maxLength={100}
-              disabled={pending}
+              disabled={pending || !hydrated}
             />
             <div className="label-row">
               <label htmlFor="password">Password</label>
@@ -158,7 +160,7 @@ export function LoginForm() {
                 autoComplete="current-password"
                 required
                 maxLength={200}
-                disabled={pending}
+                disabled={pending || !hydrated}
               />
               <button
                 type="button"
@@ -174,7 +176,7 @@ export function LoginForm() {
                 {error}
               </p>
             )}
-            <button className="button primary login-submit" disabled={pending}>
+            <button className="button primary login-submit" disabled={pending || !hydrated}>
               {pending ? (
                 <>
                   <LoaderCircle className="spin" size={18} />
@@ -212,13 +214,13 @@ export function LoginForm() {
                 password.value = 'emilyspass';
                 username.focus();
               }}
-              disabled={pending}
+              disabled={pending || !hydrated}
             >
               Fill in demo credentials <ArrowRight size={14} />
             </button>
           </div>
           <p className="login-footnote">
-            <LockKeyhole size={13} /> Your session is securely stored in an HTTP-only cookie.
+            <LockKeyhole size={13} /> A secure sign-in for your product workspace.
           </p>
         </div>
         <span className="login-bottom">A thoughtful workspace for your products.</span>

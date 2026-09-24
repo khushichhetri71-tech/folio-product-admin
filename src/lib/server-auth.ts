@@ -1,7 +1,8 @@
 import 'server-only';
 import { cookies } from 'next/headers';
 import { cache } from 'react';
-import { createApi } from './axios';
+import { createApi, ApiError } from './axios';
+import { redirect } from 'next/navigation';
 import type { User } from './types';
 export const SESSION_COOKIE = 'folio_session';
 export const getSession = cache(async () => {
@@ -12,3 +13,15 @@ export const getSession = cache(async () => {
   const { id, username, firstName, lastName, email, image } = data;
   return { user: { id, username, firstName, lastName, email, image }, token };
 });
+
+export async function requireSession() {
+  let session;
+  try {
+    session = await getSession();
+  } catch (error) {
+    if (error instanceof ApiError && error.status === 401) redirect('/login?expired=1');
+    throw error;
+  }
+  if (!session) redirect('/login');
+  return session;
+}

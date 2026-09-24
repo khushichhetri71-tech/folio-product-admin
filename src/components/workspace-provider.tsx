@@ -3,6 +3,7 @@ import { createContext, useContext, useEffect, useReducer, useRef, type ReactNod
 import { CheckCircle2, X } from 'lucide-react';
 import type { Product, User, Workspace } from '@/lib/types';
 import { emptyWorkspace } from '@/lib/query';
+import { readWorkspace } from '@/lib/workspace-storage';
 import { addProduct, deleteProduct, updateProduct } from '@/lib/products-api';
 import type { ProductInput } from '@/lib/validation';
 interface Context {
@@ -26,20 +27,9 @@ export function WorkspaceProvider({ user, children }: { user: User; children: Re
   useEffect(() => {
     let changes = emptyWorkspace();
     try {
-      const raw = localStorage.getItem(key);
-      if (raw) {
-        const data = JSON.parse(raw);
-        if (
-          Array.isArray(data.added) &&
-          Array.isArray(data.deleted) &&
-          data.updated &&
-          typeof data.updated === 'object' &&
-          data.added.every((p: Product) => typeof p.id === 'number' && typeof p.title === 'string')
-        )
-          changes = data;
-      }
+      changes = readWorkspace(localStorage.getItem(key));
     } catch {
-      setNotice('Browser storage is unavailable. Changes cannot be saved on this device.');
+      setNotice('Saved workspace data could not be read. Showing the original catalog.');
     }
     changesRef.current = changes;
     dispatch({ changes, ready: true });

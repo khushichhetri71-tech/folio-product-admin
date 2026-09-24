@@ -17,6 +17,7 @@ export function ProductForm({
   onSaved?: (product: Product) => void;
 }) {
   const { save } = useWorkspace();
+  const [category, setCategory] = useState(product?.category || '');
   const [categories, setCategories] = useState<Category[]>([]),
     [error, setError] = useState(''),
     [errors, setErrors] = useState<Record<string, string>>({}),
@@ -126,7 +127,8 @@ export function ProductForm({
         <select
           id="category"
           name="category"
-          defaultValue={product?.category || ''}
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
           aria-invalid={!!errors.category}
         >
           <option value="">Choose a category</option>

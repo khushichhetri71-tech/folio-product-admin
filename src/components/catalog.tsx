@@ -26,13 +26,24 @@ import { DeleteDialog } from './delete-dialog';
 function SearchField({ value, onChange }: { value: string; onChange: (value: string) => void }) {
   const [text, setText] = useReducer((_: string, v: string) => v, value);
   const callback = useRef(onChange);
+  const submitted = useRef<string | null>(null);
   useEffect(() => {
     callback.current = onChange;
   }, [onChange]);
-  useEffect(() => setText(value), [value]);
+  useEffect(() => {
+    // An acknowledgement of our own debounced update must not replace newer typing.
+    if (submitted.current === value) {
+      submitted.current = null;
+      return;
+    }
+    setText(value);
+  }, [value]);
   useEffect(() => {
     if (text === value) return;
-    const timer = setTimeout(() => callback.current(text.trim()), 350);
+    const timer = setTimeout(() => {
+      submitted.current = text.trim();
+      callback.current(text.trim());
+    }, 350);
     return () => clearTimeout(timer);
   }, [text, value]);
   return (
@@ -50,6 +61,7 @@ function SearchField({ value, onChange }: { value: string; onChange: (value: str
           className="icon-button"
           aria-label="Clear search"
           onClick={() => {
+            submitted.current = '';
             setText('');
             callback.current('');
           }}
@@ -85,18 +97,17 @@ export function Catalog() {
     changes.added.length > 0 ||
     Object.keys(changes.updated).length > 0 ||
     changes.deleted.length > 0;
-  const navigate = useCallback(
-    (patch: Partial<Query>) => {
-      const next = { ...query, ...patch };
-      const qs = queryString(next);
-      router.replace(`/products${qs ? '?' + qs : ''}`, { scroll: false });
-    },
-    [query, router],
-  );
+  const navigate = useCallback((patch: Partial<Query>) => {
+    const next = { ...parseQuery(new URLSearchParams(window.location.search)), ...patch };
+    const qs = queryString(next);
+    // These are client-side view options. Native history integrates with useSearchParams
+    // without a delayed server navigation overwriting a more recent search.
+    window.history.replaceState(null, '', `/products${qs ? '?' + qs : ''}`);
+  }, []);
   useEffect(() => {
     if (raw !== normalized)
-      router.replace(`/products${normalized ? '?' + normalized : ''}`, { scroll: false });
-  }, [raw, normalized, router]);
+      window.history.replaceState(null, '', `/products${normalized ? '?' + normalized : ''}`);
+  }, [raw, normalized]);
   useEffect(() => {
     const c = new AbortController();
     getCategories(c.signal)

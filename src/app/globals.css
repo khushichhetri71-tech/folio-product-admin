@@ -182,7 +182,7 @@ a svg {
 }
 .eyebrow {
   display: block;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 1.8px;
   color: #7b887b;
@@ -227,7 +227,7 @@ a svg {
 .avatar.small {
   height: 32px;
   width: 32px;
-  font-size: 9px;
+  font-size: 10px;
 }
 .spin {
   animation: spin 1s linear infinite;
@@ -311,12 +311,12 @@ a svg {
   line-height: 1.6;
 }
 .workspace-switch div > span {
-  font-size: 9px;
+  font-size: 10px;
   color: #93978d;
   display: block;
 }
 .workspace-plan {
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 0.5px;
   color: #87907e;
   border: 1px solid #e4e8df;
@@ -325,7 +325,7 @@ a svg {
   margin-left: auto;
 }
 .nav-label {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1.5px;
   font-weight: 600;
   color: #a0a697;
@@ -399,7 +399,7 @@ a svg {
   display: block;
 }
 .user-block div > span {
-  font-size: 9px;
+  font-size: 10px;
   display: block;
   color: #9a9f91;
   margin-top: 5px;
@@ -445,7 +445,7 @@ a svg {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 10px;
   color: #77826e;
 }
 .environment i,
@@ -472,7 +472,7 @@ a svg {
   padding: 22px 0;
   border-top: 1px solid var(--border);
   color: #a1a795;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.15px;
 }
 /* Catalog */
@@ -504,7 +504,7 @@ a svg {
   margin-top: 10px;
 }
 .page-heading .eyebrow {
-  font-size: 8px;
+  font-size: 10px;
   margin-bottom: 9px;
   letter-spacing: 1.7px;
 }
@@ -543,7 +543,7 @@ a svg {
   line-height: 1;
 }
 .stat-card p {
-  font-size: 9px;
+  font-size: 10px;
   color: #a0a693;
   margin-top: 12px;
 }
@@ -592,7 +592,7 @@ a svg {
   letter-spacing: -0.2px;
 }
 .count-tag {
-  font-size: 9px;
+  font-size: 10px;
   min-width: 27px;
   text-align: center;
   padding: 3px 7px;
@@ -604,7 +604,7 @@ a svg {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 9px;
+  font-size: 10px;
   color: #a0a794;
 }
 .panel-note > span {
@@ -708,7 +708,7 @@ a svg {
   border-bottom: 1px solid #edf0e6;
   padding: 12px 16px;
   color: #8a947d;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -759,7 +759,7 @@ a svg {
 }
 .product-cell div > span:not(.rating) {
   display: block;
-  font-size: 8px;
+  font-size: 10px;
   color: #a1a795;
   letter-spacing: 0.3px;
   margin-top: 4px;
@@ -784,7 +784,7 @@ a svg {
   mix-blend-mode: multiply;
 }
 .category-tag {
-  font-size: 9px;
+  font-size: 10px;
   display: inline-block;
   padding: 5px 8px;
   line-height: 1;
@@ -815,7 +815,7 @@ a svg {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 9px;
+  font-size: 10px;
   white-space: nowrap;
 }
 .stock-badge > i {
@@ -835,7 +835,7 @@ a svg {
 }
 .stock-count {
   color: #a6ac9b;
-  font-size: 8px;
+  font-size: 10px;
   margin-left: 3px;
 }
 .row-actions {
@@ -885,7 +885,7 @@ a svg {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 9px;
+  font-size: 10px;
   color: #929e83;
   white-space: nowrap;
 }
@@ -932,7 +932,7 @@ a svg {
   display: flex;
   justify-content: space-between;
   padding-top: 18px;
-  font-size: 9px;
+  font-size: 10px;
   color: #a4ac99;
 }
 .catalog-footnote > span:first-child {
@@ -1243,7 +1243,7 @@ a svg {
   position: absolute;
   top: 19px;
   left: 20px;
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 2px;
   color: #a4ad96;
 }
@@ -1261,7 +1261,7 @@ a svg {
   position: absolute;
   bottom: 16px;
   right: 19px;
-  font-size: 9px;
+  font-size: 10px;
   color: #98a18c;
 }
 .gallery-thumbnails {
@@ -1342,7 +1342,7 @@ a svg {
   gap: 19px;
 }
 .product-meta dt {
-  font-size: 9px;
+  font-size: 10px;
   color: #9da68f;
   margin-bottom: 6px;
 }
@@ -1412,17 +1412,17 @@ a svg {
 }
 .review-person strong {
   display: block;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 500;
 }
 .review-person div > span {
-  font-size: 8px;
+  font-size: 10px;
   color: #a1ac92;
   display: block;
   margin-top: 5px;
 }
 .verified {
-  font-size: 7px;
+  font-size: 10px;
   color: #92a083;
   margin-left: auto;
 }
@@ -1464,7 +1464,7 @@ a svg {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0.25px;
   color: #849175;
   border: 1px solid #dce3cf;
@@ -1581,13 +1581,13 @@ a svg {
   color: #b5a188;
 }
 .art-row b {
-  font-size: 9px;
+  font-size: 10px;
   display: block;
   font-weight: 500;
   color: #607550;
 }
 .art-row div > span:not(:empty) {
-  font-size: 8px;
+  font-size: 10px;
   display: block;
   color: #a8b399;
   margin-top: 5px;
@@ -1630,7 +1630,7 @@ a svg {
 }
 .art-caption {
   display: block;
-  font-size: 7px;
+  font-size: 10px;
   color: #adb89f;
   margin-top: 9px;
 }
@@ -1665,7 +1665,7 @@ a svg {
 }
 .art-floating small {
   display: block;
-  font-size: 8px;
+  font-size: 10px;
   color: #a4ae94;
   margin-top: 5px;
 }
@@ -1673,12 +1673,12 @@ a svg {
   display: flex;
   justify-content: space-between;
   color: #a4af94;
-  font-size: 8px;
+  font-size: 10px;
   margin-top: 45px;
 }
 .story-footer > span:first-child {
   letter-spacing: 1.4px;
-  font-size: 7px;
+  font-size: 10px;
 }
 .login-form-section {
   position: relative;
@@ -1704,7 +1704,7 @@ a svg {
   margin-bottom: 29px;
 }
 .login-form-wrap .eyebrow {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1.6px;
   color: #9ca58f;
   margin-bottom: 10px;
@@ -1785,7 +1785,7 @@ a svg {
   font-weight: 500;
 }
 .tag {
-  font-size: 7px;
+  font-size: 10px;
   padding: 3px 6px;
   color: #8e9b7e;
   background: #eff2e8;
@@ -1794,7 +1794,7 @@ a svg {
   margin-left: auto;
 }
 .demo-credentials p {
-  font-size: 9px;
+  font-size: 10px;
   color: #a4ae96;
   margin-top: 8px;
   line-height: 1.5;
@@ -1808,7 +1808,7 @@ a svg {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-size: 8px;
+  font-size: 10px;
   color: #a1aa93;
 }
 .credential-values code {
@@ -1821,7 +1821,7 @@ a svg {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 9px;
+  font-size: 10px;
   color: #6c8858;
   background: none;
   padding: 0;
@@ -1832,7 +1832,7 @@ a svg {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  font-size: 8px;
+  font-size: 10px;
   color: #aab39d;
   margin-top: 23px;
 }
@@ -1840,7 +1840,7 @@ a svg {
   position: absolute;
   bottom: 30px;
   text-align: center;
-  font-size: 9px;
+  font-size: 10px;
   color: #a5af99;
 }
 .login-mobile-brand {
@@ -1919,7 +1919,7 @@ a svg {
   }
   .select-wrap select {
     max-width: 155px;
-    font-size: 9px;
+    font-size: 10px;
   }
   .search-input {
     max-width: 250px;
@@ -1929,7 +1929,7 @@ a svg {
     min-height: 126px;
   }
   .stat-card p {
-    font-size: 8px;
+    font-size: 10px;
   }
   .pagination {
     padding: 16px 18px;
@@ -2010,13 +2010,13 @@ a svg {
     padding: 14px 11px;
   }
   .workspace-note strong {
-    font-size: 9px;
+    font-size: 10px;
   }
   .user-block {
     gap: 5px;
   }
   .user-block strong {
-    font-size: 9px;
+    font-size: 10px;
   }
   .user-block .avatar {
     width: 30px;
@@ -2041,7 +2041,7 @@ a svg {
   }
   .desktop-products td,
   .desktop-products th {
-    font-size: 9px;
+    font-size: 10px;
   }
   .desktop-products th:first-child,
   .desktop-products td:first-child {
@@ -2051,14 +2051,14 @@ a svg {
     max-width: 160px;
   }
   .category-tag {
-    font-size: 8px;
+    font-size: 10px;
     padding: 5px;
   }
   .row-actions .icon-button {
     width: 23px;
   }
   .stock-badge {
-    font-size: 8px;
+    font-size: 10px;
     gap: 4px;
   }
   .stock-count {
@@ -2096,7 +2096,7 @@ a svg {
     justify-content: flex-end;
   }
   .page-size {
-    font-size: 8px;
+    font-size: 10px;
   }
   .page-heading h1 {
     font-size: 28px;
@@ -2157,7 +2157,7 @@ a svg {
     font-size: 25px;
   }
   .login-footnote {
-    font-size: 7px;
+    font-size: 10px;
   }
 }
 @media (max-width: 800px) {
@@ -2324,7 +2324,7 @@ a svg {
     font-size: 11px;
   }
   .login-footnote {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 @media (max-width: 600px) {
@@ -2367,7 +2367,7 @@ a svg {
     margin-top: 14px;
   }
   .stat-card > div > span {
-    font-size: 8px;
+    font-size: 10px;
     position: relative;
     z-index: 1;
   }
@@ -2384,7 +2384,7 @@ a svg {
     height: 14px;
   }
   .stat-card p {
-    font-size: 7px;
+    font-size: 10px;
     max-width: 70px;
     margin-top: 9px;
     line-height: 1.5;
@@ -2417,7 +2417,7 @@ a svg {
     padding-left: 9px;
   }
   .select-wrap select {
-    font-size: 9px;
+    font-size: 10px;
     max-width: 100%;
     padding-right: 0;
   }
@@ -2432,7 +2432,7 @@ a svg {
     align-items: flex-start;
   }
   .active-filters > span {
-    font-size: 9px;
+    font-size: 10px;
     line-height: 1.7;
     align-items: flex-start;
   }
@@ -2467,7 +2467,7 @@ a svg {
     line-height: 1.5;
   }
   .product-card .product-cell .mobile-category {
-    font-size: 8px;
+    font-size: 10px;
     margin: 0 0 4px;
     color: #99a489;
   }
@@ -2488,7 +2488,7 @@ a svg {
     font-weight: 600;
   }
   .card-values .stock-badge {
-    font-size: 9px;
+    font-size: 10px;
   }
   .stock-count {
     display: inline;
@@ -2525,7 +2525,7 @@ a svg {
     flex-wrap: wrap;
   }
   .page-size {
-    font-size: 9px;
+    font-size: 10px;
   }
   .page-button {
     min-width: 26px;
@@ -2539,13 +2539,13 @@ a svg {
     align-self: flex-start;
   }
   .catalog-footnote {
-    font-size: 8px;
+    font-size: 10px;
   }
   .catalog-footnote > span:last-child {
     display: none;
   }
   .app-footer {
-    font-size: 8px;
+    font-size: 10px;
     margin-left: 20px;
     margin-right: 20px;
     padding: 20px 0;
@@ -2556,7 +2556,7 @@ a svg {
     line-height: 1.7;
   }
   .environment {
-    font-size: 8px;
+    font-size: 10px;
   }
   .topbar-right {
     gap: 9px;
@@ -2564,7 +2564,7 @@ a svg {
   .topbar-right .avatar {
     width: 29px;
     height: 29px;
-    font-size: 8px;
+    font-size: 10px;
   }
   .breadcrumbs {
     font-size: 10px;
@@ -2613,7 +2613,7 @@ a svg {
     margin-right: -21px;
   }
   .form-intro p {
-    font-size: 9px;
+    font-size: 10px;
   }
   .product-form input,
   .product-form textarea,
@@ -2670,5 +2670,70 @@ a svg {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Keep secondary copy readable while retaining the quiet palette. */
+.page-heading p,
+.stat-card > div > span,
+.stat-card p,
+.panel-note,
+.pagination-summary,
+.page-size,
+.catalog-footnote,
+.app-footer,
+.product-cell div > span:not(.rating),
+.workspace-note p,
+.user-block div > span,
+.login-subtitle,
+.login-footnote,
+.demo-credentials p,
+.credential-values > span,
+.login-bottom,
+.story-content > p,
+.description p,
+.form-help {
+  color: #6c7865;
+}
+.desktop-products th,
+.category-tag,
+.stock-count,
+.active-filters {
+  color: #69775e;
+}
+.product-cell strong,
+.price-cell {
+  font-size: 12px !important;
+}
+.search-input input,
+.select-wrap select {
+  font-size: 11px;
+}
+.stock-badge.in {
+  color: #4d7b43;
+}
+.stock-badge.low {
+  color: #96732a;
+}
+.stock-badge.out {
+  color: #a65243;
+}
+@media (max-width: 600px) {
+  .product-card .product-cell strong {
+    font-size: 14px !important;
+  }
+  .stat-card p {
+    max-width: 100%;
+    padding-right: 20px;
+    font-size: 9px;
+  }
+  .stat-card > div > span {
+    font-size: 9px;
+  }
+  .stat-icon {
+    bottom: 10px;
+  }
+  .pagination-controls {
+    row-gap: 12px;
   }
 }
