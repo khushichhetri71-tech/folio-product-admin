@@ -159,7 +159,7 @@ test('API error can be retried and expired token is rejected', async ({ page }) 
     {
       name: 'folio_session',
       value: 'invalid-token',
-      domain: 'localhost',
+      domain: new URL(page.url()).hostname,
       path: '/',
       httpOnly: true,
       sameSite: 'Lax',
