@@ -153,7 +153,7 @@ export function ProductDetail({ id }: { id: number }) {
           </div>
           <div className="detail-price">
             {money(p.price)}
-            <span>USD</span>
+            <span>INR</span>
           </div>
           <Stock value={p.stock} />
           <div className="description">

@@ -160,10 +160,10 @@ export function ProductForm({
         <div className="form-grid">
           <div>
             <label htmlFor="price">
-              Price (USD) <span>*</span>
+              Price (INR) <span>*</span>
             </label>
             <div className="price-input">
-              <span>$</span>
+              <span>₹</span>
               <input
                 id="price"
                 name="price"

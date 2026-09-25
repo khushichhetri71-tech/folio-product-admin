@@ -12,7 +12,7 @@ test('existing-product edits and deletions persist and update filtered totals', 
   await expect(page.getByRole('dialog').getByLabel('Category')).toHaveValue('beauty');
   await page.getByRole('dialog').getByLabel('Product name').fill('Edited mascara');
   await page.getByRole('dialog').getByLabel('Category').selectOption('fragrances');
-  await page.getByLabel('Price (USD)').fill('7.50');
+  await page.getByLabel('Price (INR)').fill('7.50');
   const update = page.waitForResponse(
     (r) => r.url().endsWith('/api/products/1') && r.request().method() === 'PUT',
   );
@@ -25,7 +25,7 @@ test('existing-product edits and deletions persist and update filtered totals', 
   await page.goto('/products?category=fragrances&sort=price-asc');
   await expect(page.locator('tbody tr').first()).toContainText('Edited mascara');
   await page.reload();
-  await expect(page.locator('tbody tr').first()).toContainText('$7.50');
+  await expect(page.locator('tbody tr').first()).toContainText('₹7.50');
   await page.getByRole('button', { name: 'Delete Edited mascara', exact: true }).click();
   const deletion = page.waitForResponse(
     (r) => r.url().endsWith('/api/products/1') && r.request().method() === 'DELETE',

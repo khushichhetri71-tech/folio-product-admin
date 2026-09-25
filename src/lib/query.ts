@@ -75,7 +75,7 @@ export function pageNumbers(page: number, total: number): (number | string)[] {
   return list;
 }
 export const money = (value: number) =>
-  new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+  new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(value);
 export const categoryName = (value: string) =>
   value
     .split('-')

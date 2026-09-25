@@ -20,7 +20,7 @@ export const productSchema = z.object({
     .number()
     .finite()
     .min(0.01, 'Price must be greater than zero.')
-    .max(1000000, 'Price must be below $1,000,000.'),
+    .max(1000000, 'Price must be below ₹10,00,000.'),
   stock: z
     .number()
     .int('Stock must be a whole number.')

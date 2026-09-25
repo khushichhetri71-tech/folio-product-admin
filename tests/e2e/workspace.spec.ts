@@ -86,7 +86,7 @@ test('add, validate, edit, persist, cancel delete and delete', async ({ page }) 
   await page.getByLabel('Product name').fill('Test ceramic cup');
   await page.getByLabel('Description').fill('A handmade ceramic cup for testing.');
   await page.getByRole('dialog').getByLabel('Category').selectOption('home-decoration');
-  await page.getByLabel('Price (USD)').fill('25.50');
+  await page.getByLabel('Price (INR)').fill('25.50');
   await page.getByLabel('Stock quantity').fill('8');
   let creates = 0;
   page.on('request', (r) => {
@@ -102,12 +102,12 @@ test('add, validate, edit, persist, cancel delete and delete', async ({ page }) 
   await expect(page.getByRole('heading', { name: 'Test ceramic cup', exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Edit product', exact: true }).click();
   await page.getByLabel('Product name').fill('Updated ceramic cup');
-  await page.getByLabel('Price (USD)').fill('31.25');
+  await page.getByLabel('Price (INR)').fill('31.25');
   await page.getByRole('button', { name: 'Save changes', exact: true }).click();
   await expect(
     page.getByRole('heading', { name: 'Updated ceramic cup', exact: true }),
   ).toBeVisible();
-  await expect(page.locator('.detail-price')).toContainText('$31.25');
+  await expect(page.locator('.detail-price')).toContainText('₹31.25');
   await page.getByRole('button', { name: 'Delete', exact: true }).click();
   await page.getByRole('button', { name: 'Keep product', exact: true }).click();
   await expect(

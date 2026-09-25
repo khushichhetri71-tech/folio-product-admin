@@ -173,7 +173,7 @@ export function Catalog() {
     if (!load.data) return;
     const escape = (v: unknown) => `"${String(v).replace(/"/g, '""')}"`;
     const csv = [
-      ['ID', 'Title', 'Category', 'Price (USD)', 'Rating', 'Stock'],
+      ['ID', 'Title', 'Category', 'Price (INR)', 'Rating', 'Stock'],
       ...load.data.products.map((p) => [p.id, p.title, p.category, p.price, p.rating, p.stock]),
     ]
       .map((row) =>
