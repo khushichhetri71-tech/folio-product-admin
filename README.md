@@ -4,7 +4,9 @@ Folio is a product dashboard built for a frontend assignment using Next.js, Reac
 
 The design uses warm neutral colors and green accents, with a table on desktop and product cards on smaller screens.
 
-[Try the live demo](https://folio-product-admin.vercel.app) · [GitHub repository](https://github.com/khushichhetri71-tech/folio-product-admin)
+Live demo: [**folio-product-admin.vercel.app**](https://folio-product-admin.vercel.app/)
+
+[GitHub repository](https://github.com/khushichhetri71-tech/folio-product-admin)
 
 ## Try it out
 
